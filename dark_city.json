@@ -1,0 +1,466 @@
+{
+  "version": "1.0.0",
+  "gameInfo": {
+    "name": "Dark City Expansion",
+    "publisher": "Upper Deck"
+  },
+  "expansion": {
+    "id": "dark_city",
+    "name": "Dark City",
+    "releaseYear": 2013,
+    "heroes": [
+      {
+        "name": "Angel",
+        "team": "X-Men",
+        "types": [
+          "Strength",
+          "Covert",
+          "Instinct"
+        ],
+        "displayName": "Angel"
+      },
+      {
+        "name": "Bishop",
+        "team": "X-Men",
+        "types": [
+          "Covert",
+          "Ranged",
+          "Tech"
+        ],
+        "displayName": "Bishop"
+      },
+      {
+        "name": "Blade",
+        "team": "Marvel Knights",
+        "types": [
+          "Strength",
+          "Covert",
+          "Tech",
+          "Instinct"
+        ],
+        "displayName": "Blade"
+      },
+      {
+        "name": "Cable",
+        "team": "X-Force",
+        "types": [
+          "Tech",
+          "Ranged",
+          "Covert"
+        ],
+        "displayName": "Cable"
+      },
+      {
+        "name": "Colossus",
+        "team": "X-Force",
+        "types": [
+          "Strength",
+          "Covert"
+        ],
+        "displayName": "Colossus"
+      },
+      {
+        "name": "Daredevil",
+        "team": "Marvel Knights",
+        "types": [
+          "Strength",
+          "Instinct",
+          "Covert"
+        ],
+        "displayName": "Daredevil"
+      },
+      {
+        "name": "Domino",
+        "team": "X-Force",
+        "types": [
+          "Tech",
+          "Instinct",
+          "Covert"
+        ],
+        "displayName": "Domino"
+      },
+      {
+        "name": "Elektra",
+        "team": "Marvel Knights",
+        "types": [
+          "Covert",
+          "Instinct"
+        ],
+        "displayName": "Elektra"
+      },
+      {
+        "name": "Forge",
+        "team": "X-Force",
+        "types": [
+          "Tech"
+        ],
+        "displayName": "Forge"
+      },
+      {
+        "name": "Ghost_Rider",
+        "team": "Marvel Knights",
+        "types": [
+          "Ranged",
+          "Tech",
+          "Strength"
+        ],
+        "displayName": "Ghost Rider"
+      },
+      {
+        "name": "Iceman",
+        "team": "X-Men",
+        "types": [
+          "Ranged",
+          "Strength"
+        ],
+        "displayName": "Iceman"
+      },
+      {
+        "name": "Iron_Fist",
+        "team": "Marvel Knights",
+        "types": [
+          "Instinct",
+          "Strength"
+        ],
+        "displayName": "Iron Fist"
+      },
+      {
+        "name": "Jean_Grey",
+        "team": "X-Men",
+        "types": [
+          "Ranged",
+          "Covert"
+        ],
+        "displayName": "Jean Grey"
+      },
+      {
+        "name": "Nightcrawler",
+        "team": "X-Men",
+        "types": [
+          "Instinct",
+          "Covert"
+        ],
+        "displayName": "Nightcrawler"
+      },
+      {
+        "name": "Professor_X",
+        "team": "X-Men",
+        "types": [
+          "Instinct",
+          "Ranged",
+          "Covert"
+        ],
+        "displayName": "Professor X"
+      },
+      {
+        "name": "Punisher",
+        "team": "Marvel Knights",
+        "types": [
+          "Tech",
+          "Strength"
+        ],
+        "displayName": "Punisher"
+      },
+      {
+        "name": "Wolverine_DarkCity",
+        "team": "X-Force",
+        "types": [
+          "Instinct",
+          "Covert",
+          "Strength"
+        ],
+        "displayName": "Wolverine"
+      }
+    ],
+    "masterminds": [
+      {
+        "name": "Apocalypse",
+        "postRandomization": {
+          "conditionalRules": [
+            {
+              "parameter": "numberOfPlayers",
+              "conditions": {
+                "2-5": {
+                  "villains": {
+                    "forceInclude": [
+                      "Four_Horsemen"
+                    ],
+                    "priority": 10
+                  }
+                },
+                "1": {
+                  "villains": {
+                    "forceExclude": [
+                      "Four_Horsemen"
+                    ],
+                    "priority": 10
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "displayName": "Apocalypse"
+      },
+      {
+        "name": "Kingpin",
+        "postRandomization": {
+          "conditionalRules": [
+            {
+              "parameter": "numberOfPlayers",
+              "conditions": {
+                "2-5": {
+                  "villains": {
+                    "forceInclude": [
+                      "Streets_of_New_York"
+                    ],
+                    "priority": 10
+                  }
+                },
+                "1": {
+                  "villains": {
+                    "forceExclude": [
+                      "Streets_of_New_York"
+                    ],
+                    "priority": 10
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "displayName": "Kingpin"
+      },
+      {
+        "name": "Mephisto",
+        "postRandomization": {
+          "conditionalRules": [
+            {
+              "parameter": "numberOfPlayers",
+              "conditions": {
+                "2-5": {
+                  "villains": {
+                    "forceInclude": [
+                      "Underworld"
+                    ],
+                    "priority": 10
+                  }
+                },
+                "1": {
+                  "villains": {
+                    "forceExclude": [
+                      "Underworld"
+                    ],
+                    "priority": 10
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "displayName": "Mephisto"
+      },
+      {
+        "name": "Mr_Sinister",
+        "postRandomization": {
+          "conditionalRules": [
+            {
+              "parameter": "numberOfPlayers",
+              "conditions": {
+                "2-5": {
+                  "villains": {
+                    "forceInclude": [
+                      "Marauders"
+                    ],
+                    "priority": 10
+                  }
+                },
+                "1": {
+                  "villains": {
+                    "forceExclude": [
+                      "Marauders"
+                    ],
+                    "priority": 10
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "displayName": "Mr. Sinister"
+      },
+      {
+        "name": "Stryfe",
+        "postRandomization": {
+          "conditionalRules": [
+            {
+              "parameter": "numberOfPlayers",
+              "conditions": {
+                "2-5": {
+                  "villains": {
+                    "forceInclude": [
+                      "MLF"
+                    ],
+                    "priority": 10
+                  }
+                },
+                "1": {
+                  "villains": {
+                    "forceExclude": [
+                      "MLF"
+                    ],
+                    "priority": 10
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "displayName": "Stryfe"
+      }
+    ],
+    "villains": [
+      {
+        "name": "Emissaries_of_Evil",
+        "displayName": "Emissaries of Evil"
+      },
+      {
+        "name": "Four_Horsemen",
+        "displayName": "Four Horsemen"
+      },
+      {
+        "name": "Marauders",
+        "displayName": "Marauders"
+      },
+      {
+        "name": "MLF",
+        "displayName": "MLF"
+      },
+      {
+        "name": "Streets_of_New_York",
+        "displayName": "Streets of New York"
+      },
+      {
+        "name": "Underworld",
+        "displayName": "Underworld"
+      }
+    ],
+    "henchmen": [
+      {
+        "name": "Maggia_Goons",
+        "displayName": "Maggia Goons"
+      },
+      {
+        "name": "Phalanx",
+        "displayName": "Phalanx"
+      }
+    ],
+    "schemes": [
+      {
+        "name": "Capture_Baby_Hope",
+        "schemeTwists": 8,
+        "setup": {
+          "notes": [
+            "Put a token on this Scheme to represent the baby, Hope Summers."
+          ]
+        },
+        "displayName": "Capture Baby Hope"
+      },
+      {
+        "name": "Detonate_the_Helicarrier",
+        "schemeTwists": 8,
+        "setup": {
+          "heroes": {
+            "set": {
+              "count": 6
+            }
+          }
+        },
+        "displayName": "Detonate the Helicarrier"
+      },
+      {
+        "name": "Massive_Earthquake_Generator",
+        "schemeTwists": 8,
+        "setup": {},
+        "displayName": "Massive Earthquake Generator"
+      },
+      {
+        "name": "Organized_Crime_Wave",
+        "schemeTwists": 8,
+        "postRandomization": {
+          "henchmen": {
+            "forceInclude": [
+              "Maggia_Goons"
+            ],
+            "priority": 10
+          }
+        },
+        "displayName": "Organized Crime Wave"
+      },
+      {
+        "name": "Save_Humanity",
+        "schemeTwists": 8,
+        "setup": {
+          "conditionalRules": [
+            {
+              "parameter": "numberOfPlayers",
+              "conditions": {
+                "1": {
+                  "notes": [
+                    "12 Bystanders in the Hero Deck."
+                  ]
+                },
+                "2-5": {
+                  "notes": [
+                    "24 Bystanders in the Hero Deck."
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "displayName": "Save Humanity"
+      },
+      {
+        "name": "Steal_the_Weaponized_Plutonium",
+        "schemeTwists": 8,
+        "setup": {
+          "villains": {
+            "addExtra": 1
+          }
+        },
+        "displayName": "Steal the Weaponized Plutonium"
+      },
+      {
+        "name": "Transform_Citizens_Into_Demons",
+        "schemeTwists": 8,
+        "postRandomization": {
+          "bystanders": 0,
+          "notes": [
+            "Villain Deck includes 14 extra Jean Grey cards."
+          ]
+        },
+        "displayName": "Transform Citizens Into Demons"
+      },
+      {
+        "name": "X-Cutioners_Song",
+        "schemeTwists": 8,
+        "postRandomization": {
+          "bystanders": 0,
+          "dynamicNotes": [
+            {
+              "template": "Villain Deck includes 14 cards for an extra Hero. ({selectedHero})",
+              "variables": {
+                "selectedHero": {
+                  "type": "randomUnusedElementOfType",
+                  "elementType": "heroes"
+                }
+              }
+            }
+          ]
+        },
+        "displayName": "X-Cutioner's Song"
+      }
+    ]
+  }
+}

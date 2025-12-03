@@ -1,0 +1,472 @@
+{
+  "id": "legendary",
+  "name": "Legendary: A Marvel Deck Building Game",
+  "publisher": "Upper Deck",
+  "version": "1.0.0",
+  "iconData": "game-icons/legendary.jpg",
+  "elementTypes": {
+    "heroes": {
+      "id": "heroes",
+      "name": "Hero",
+      "pluralName": "Heroes",
+      "isRequired": true,
+      "properties": ["team", "types"]
+    },
+    "villains": {
+      "id": "villains", 
+      "name": "Villain",
+      "pluralName": "Villains",
+      "isRequired": true,
+      "properties": []
+    },
+    "henchmen": {
+      "id": "henchmen",
+      "name": "Henchmen",
+      "pluralName": "Henchmen", 
+      "isRequired": true,
+      "properties": []
+    },
+    "masterminds": {
+      "id": "masterminds",
+      "name": "Mastermind",
+      "pluralName": "Masterminds",
+      "isRequired": true,
+      "properties": []
+    },
+    "schemes": {
+      "id": "schemes",
+      "name": "Scheme",
+      "pluralName": "Schemes",
+      "isRequired": true,
+      "properties": ["schemeTwists"]
+    },
+    "boards": {
+      "id": "boards",
+      "name": "Board",
+      "pluralName": "Boards",
+      "isRequired": true,
+      "properties": []
+    }
+  },
+  "rules": {
+    "playerCountRules": {
+      "1": {
+        "elementCounts": {
+          "heroes": 3,
+          "villains": 1,
+          "henchmen": 1,
+          "masterminds": 1,
+          "schemes": 1,
+          "boards": 1
+        },
+        "notes": [
+          "Use only 3 henchmen cards."
+        ]
+      },
+      "2": {
+        "elementCounts": {
+          "heroes": 5,
+          "villains": 2,
+          "henchmen": 1,
+          "masterminds": 1,
+          "schemes": 1,
+          "boards": 1
+        }
+      },
+      "3": {
+        "elementCounts": {
+          "heroes": 5,
+          "villains": 3,
+          "henchmen": 1,
+          "masterminds": 1,
+          "schemes": 1,
+          "boards": 1
+        }
+      },
+      "4": {
+        "elementCounts": {
+          "heroes": 5,
+          "villains": 3,
+          "henchmen": 2,
+          "masterminds": 1,
+          "schemes": 1,
+          "boards": 1
+        }
+      },
+      "5": {
+        "elementCounts": {
+          "heroes": 6,
+          "villains": 4,
+          "henchmen": 2,
+          "masterminds": 1,
+          "schemes": 1,
+          "boards": 1
+        }
+      }
+    },
+    "requiredElementTypes": ["heroes", "villains", "henchmen", "masterminds", "schemes", "boards"],
+    "specialRules": {
+      "parameterCalculations": {
+        "masterStrikes": {
+          "basedOn": "numberOfPlayers",
+          "mappings": {
+            "1": 1,
+            "2": 5,
+            "3": 5,
+            "4": 5,
+            "5": 5
+          },
+          "defaultValue": 5
+        },
+        "bystanders": {
+          "basedOn": "numberOfPlayers", 
+          "mappings": {
+            "1": 1,
+            "2": 2,
+            "3": 8,
+            "4": 8,
+            "5": 12
+          },
+          "defaultValue": 8
+        },
+        "schemeTwists": {
+          "basedOn": "numberOfPlayers",
+          "mappings": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0
+          },
+          "defaultValue": 0
+        },
+        "wounds": {
+          "basedOn": "numberOfPlayers",
+          "mappings": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0
+          },
+          "defaultValue": 0
+        },
+        "setupNotes": {
+          "basedOn": "numberOfPlayers",
+          "mappings": {
+            "1": ["Use only 3 henchmen cards."],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+          },
+          "defaultValue": []
+        }
+      }
+    }
+  },
+  "uiSchema": {
+    "calculatedValueDisplays": [
+      {
+        "id": "setup_notes_display",
+        "calculatedValueKey": "setupNotes",
+        "displayType": "list",
+        "displayName": "Setup Notes",
+        "icon": "info",
+        "priority": 100,
+        "showWhenEmpty": false,
+        "position": "after_content",
+        "style": {
+          "cardStyle": "info",
+          "listItemIcon": "arrow_right"
+        }
+      }
+    ],
+    "customFilterPanels": [
+      {
+        "id": "teams_panel",
+        "displayName": "Teams",
+        "elementTypeId": "heroes",
+        "groupByField": "team",
+        "icon": "groups",
+        "showIcons": true,
+        "allowBulkToggle": true,
+        "showSearch": true,
+        "subtitle": "View and select heroes by team affiliation",
+        "displayConfig": {
+          "iconField": "team"
+        }
+      }
+    ],
+    "sections": [
+      {
+        "id": "schemes",
+        "displayName": "Scheme",
+        "icon": "description",
+        "priority": 1,
+        "showWhenEmpty": false,
+        "showFilterBadge": true,
+        "showGroupIcon": false,
+        "showBadges": false,
+        "badgeFields": [],
+        "availableFilters": [
+          {
+            "id": "expansion_filter",
+            "displayName": "Expansion",
+            "fieldName": "expansion",
+            "type": "dropdown",
+            "showAll": true
+          }
+        ]
+      },
+      {
+        "id": "masterminds",
+        "displayName": "Mastermind",
+        "icon": "person",
+        "priority": 2,
+        "showWhenEmpty": false,
+        "showFilterBadge": true,
+        "showGroupIcon": false,
+        "showBadges": false,
+        "badgeFields": [],
+        "availableFilters": [
+          {
+            "id": "expansion_filter",
+            "displayName": "Expansion",
+            "fieldName": "expansion",
+            "type": "dropdown",
+            "showAll": true
+          }
+        ]
+      },
+      {
+        "id": "heroes",
+        "displayName": "Heroes",
+        "icon": "shield",
+        "priority": 3,
+        "showWhenEmpty": true,
+        "showFilterBadge": true,
+        "additionalFields": ["team", "types"],
+        "showSearch": true,
+        "showBulkActions": true,
+        "showGroupIcon": true,
+        "showBadges": true,
+        "badgeFields": ["types"],
+        "availableFilters": [
+          {
+            "id": "expansion_filter",
+            "displayName": "Expansion",
+            "fieldName": "expansion",
+            "type": "dropdown",
+            "showAll": true
+          },
+          {
+            "id": "team_filter", 
+            "displayName": "Team",
+            "fieldName": "team",
+            "type": "dropdown",
+            "showAll": true
+          }
+        ],
+        "displayConfig": {
+          "iconField": "team",
+          "iconMappings": {
+            "Avengers": {
+              "iconData": "team-icons/avengers192.png",
+              "type": "asset"
+            },
+            "X-Men": {
+              "iconData": "team-icons/xmen192.png",
+              "type": "asset"
+            },
+            "Spider-Friends": {
+              "iconData": "team-icons/spiderfriends192.png",
+              "type": "asset"
+            },
+            "Fantastic Four": {
+              "iconData": "team-icons/fantastic4192.png",
+              "type": "asset"
+            },
+            "Champions": {
+              "iconData": "team-icons/champions192.png",
+              "type": "asset"
+            },
+            "Guardians of the Galaxy": {
+              "iconData": "team-icons/gotg192.png",
+              "type": "asset"
+            },
+            "Inhumans": {
+              "iconData": "team-icons/inhumans192.png",
+              "type": "asset"
+            },
+            "Marvel Knights": {
+              "iconData": "team-icons/marvelknights192.png",
+              "type": "asset"
+            },
+            "S.H.I.E.L.D.": {
+              "iconData": "team-icons/shield192.png",
+              "type": "asset"
+            },
+            "X-Force": {
+              "iconData": "team-icons/xforce192.png",
+              "type": "asset"
+            },
+            "Heroes of Asgard": {
+              "iconData": "team-icons/heroesofasgard192.png",
+              "type": "asset"
+            },
+            "Heroes of Wakanda": {
+              "iconData": "team-icons/heroesofwakanda192.png",
+              "type": "asset"
+            },
+            "Sinister Six": {
+              "iconData": "team-icons/sinister6192.png",
+              "type": "asset"
+            },
+            "Venomverse": {
+              "iconData": "team-icons/venomverse192.png",
+              "type": "asset"
+            },
+            "Unaffiliated": {
+              "iconData": "shield",
+              "type": "material",
+              "color": "#9E9E9E"
+            }
+          },
+          "tagConfigs": [
+            {
+              "fieldName": "types",
+              "displayName": "Types",
+              "style": "chip",
+              "colorMappings": {
+                "Covert": "#FF8A80",
+                "Tech": "#90A4AE",
+                "Instinct": "#FFB74D",
+                "Strength": "#81C784",
+                "Ranged": "#64B5F6"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "villains",
+        "displayName": "Villains",
+        "icon": "dangerous",
+        "priority": 4,
+        "showWhenEmpty": true,
+        "showFilterBadge": true,
+        "additionalFields": [],
+        "showGroupIcon": false,
+        "showBadges": false,
+        "badgeFields": [],
+        "availableFilters": [
+          {
+            "id": "expansion_filter",
+            "displayName": "Expansion",
+            "fieldName": "expansion",
+            "type": "dropdown",
+            "showAll": true
+          }
+        ]
+      },
+      {
+        "id": "henchmen",
+        "displayName": "Henchmen",
+        "icon": "groups",
+        "priority": 5,
+        "showWhenEmpty": false,
+        "showFilterBadge": true,
+        "additionalFields": [],
+        "showGroupIcon": false,
+        "showBadges": false,
+        "badgeFields": [],
+        "availableFilters": [
+          {
+            "id": "expansion_filter",
+            "displayName": "Expansion",
+            "fieldName": "expansion",
+            "type": "dropdown",
+            "showAll": true
+          }
+        ]
+      },
+      {
+        "id": "boards",
+        "displayName": "Board",
+        "icon": "grid_view",
+        "priority": 6,
+        "showWhenEmpty": false,
+        "showFilterBadge": true,
+        "additionalFields": [],
+        "showGroupIcon": false,
+        "showBadges": false,
+        "badgeFields": [],
+        "availableFilters": [
+          {
+            "id": "expansion_filter",
+            "displayName": "Expansion",
+            "fieldName": "expansion",
+            "type": "dropdown",
+            "showAll": true
+          }
+        ]
+      }
+    ],
+    "gameSpecificSections": [
+      {
+        "id": "villain_deck",
+        "displayName": "Villain Deck",
+        "type": "calculated",
+        "showAlways": true,
+        "icon": "view_module",
+        "fields": ["bystanders", "masterStrikes", "schemeTwists", "wounds"]
+      }
+    ],
+    "layoutOptions": {
+      "showItemExpansions": true,
+      "sectionStyle": "card",
+      "showSectionIcons": true,
+      "compactMode": false
+    }
+  },
+  "gameOptions": {
+    "numberOfPlayers": {
+      "type": "integer",
+      "minValue": 1,
+      "maxValue": 5,
+      "defaultValue": 2,
+      "displayName": "Number of Players",
+      "description": "How many players will be playing the game",
+      "category": "setup",
+      "isVisible": true,
+      "showInSetup": true
+    },
+    "difficulty": {
+      "type": "enum",
+      "enumValues": ["Easy", "Normal", "Hard", "Legendary"],
+      "defaultValue": "Normal",
+      "displayName": "Difficulty",
+      "description": "Game difficulty level",
+      "category": "gameplay",
+      "isVisible": true
+    },
+    "mastermindPlayer": {
+      "type": "boolean",
+      "defaultValue": false,
+      "displayName": "Mastermind Player",
+      "description": "One player controls the villains",
+      "category": "gameplay",
+      "isVisible": true
+    },
+    "advancedSoloMode": {
+      "type": "boolean",
+      "defaultValue": false,
+      "displayName": "Advanced Solo Mode",
+      "description": "Enhanced challenge for solo play",
+      "category": "gameplay",
+      "isVisible": true,
+      "dependsOn": ["numberOfPlayers=1"]
+    }
+  }
+}

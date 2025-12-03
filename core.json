@@ -1,0 +1,522 @@
+{
+  "version": "1.0.0",
+  "gameInfo": {
+    "name": "Legendary: A Marvel Deck Building Game",
+    "publisher": "Upper Deck"
+  },
+  "expansion": {
+    "id": "core",
+    "name": "Core",
+    "releaseYear": 2012,
+    "heroes": [
+      {
+        "name": "Black_Widow",
+        "displayName": "Black Widow",
+        "team": "Avengers",
+        "types": [
+          "Covert",
+          "Tech"
+        ]
+      },
+      {
+        "name": "Captain_America",
+        "displayName": "Captain America Damn",
+        "team": "Avengers",
+        "types": [
+          "Instinct",
+          "Strength",
+          "Tech",
+          "Covert"
+        ]
+      },
+      {
+        "name": "Cyclops",
+        "displayName": "Cyclops",
+        "team": "X-Men",
+        "types": [
+          "Strength",
+          "Ranged"
+        ]
+      },
+      {
+        "name": "Deadpool",
+        "displayName": "Deadpool",
+        "team": "Unaffiliated",
+        "types": [
+          "Tech",
+          "Covert",
+          "Instinct"
+        ]
+      },
+      {
+        "name": "Emma_Frost",
+        "displayName": "Emma Frost",
+        "team": "X-Men",
+        "types": [
+          "Ranged",
+          "Covert",
+          "Instinct",
+          "Strength"
+        ]
+      },
+      {
+        "name": "Gambit",
+        "team": "X-Men",
+        "types": [
+          "Ranged",
+          "Covert",
+          "Instinct"
+        ],
+        "displayName": "Gambit"
+      },
+      {
+        "name": "Hawkeye",
+        "team": "Avengers",
+        "types": [
+          "Instinct",
+          "Tech"
+        ],
+        "displayName": "Hawkeye"
+      },
+      {
+        "name": "Hulk",
+        "team": "Avengers",
+        "types": [
+          "Strength",
+          "Instinct"
+        ],
+        "displayName": "Hulk"
+      },
+      {
+        "name": "Iron_Man",
+        "team": "Avengers",
+        "types": [
+          "Tech",
+          "Ranged"
+        ],
+        "displayName": "Iron Man"
+      },
+      {
+        "name": "Nick_Fury",
+        "team": "S.H.I.E.L.D.",
+        "types": [
+          "Covert",
+          "Tech",
+          "Strength"
+        ],
+        "displayName": "Nick Fury"
+      },
+      {
+        "name": "Rogue",
+        "team": "X-Men",
+        "types": [
+          "Strength",
+          "Covert"
+        ],
+        "displayName": "Rogue"
+      },
+      {
+        "name": "Spider-Man",
+        "team": "Spider-Friends",
+        "types": [
+          "Strength",
+          "Instinct",
+          "Tech",
+          "Covert"
+        ],
+        "displayName": "Spider-Man"
+      },
+      {
+        "name": "Storm",
+        "team": "X-Men",
+        "types": [
+          "Ranged",
+          "Covert"
+        ],
+        "displayName": "Storm"
+      },
+      {
+        "name": "Thor",
+        "team": "Avengers",
+        "types": [
+          "Strength",
+          "Ranged"
+        ],
+        "displayName": "Thor"
+      },
+      {
+        "name": "Wolverine",
+        "team": "X-Men",
+        "types": [
+          "Instinct"
+        ],
+        "displayName": "Wolverine"
+      }
+    ],
+    "masterminds": [
+      {
+        "name": "Dr_Doom",
+        "postRandomization": {
+          "conditionalRules": [
+            {
+              "parameter": "numberOfPlayers",
+              "conditions": {
+                "2-5": {
+                  "henchmen": {
+                    "forceInclude": [
+                      "Doombot_Legion"
+                    ],
+                    "priority": 10
+                  }
+                },
+                "1": {
+                  "henchmen": {
+                    "forceExclude": [
+                      "Doombot_Legion"
+                    ],
+                    "priority": 10
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "displayName": "Dr. Doom"
+      },
+      {
+        "name": "Loki",
+        "postRandomization": {
+          "conditionalRules": [
+            {
+              "parameter": "numberOfPlayers",
+              "conditions": {
+                "2-5": {
+                  "villains": {
+                    "forceInclude": [
+                      "Enemies_Of_Asgard"
+                    ],
+                    "priority": 10
+                  }
+                },
+                "1": {
+                  "villains": {
+                    "forceExclude": [
+                      "Enemies_Of_Asgard"
+                    ],
+                    "priority": 10
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "displayName": "Loki"
+      },
+      {
+        "name": "Magneto",
+        "postRandomization": {
+          "conditionalRules": [
+            {
+              "parameter": "numberOfPlayers",
+              "conditions": {
+                "2-5": {
+                  "villains": {
+                    "forceInclude": [
+                      "Brotherhood"
+                    ],
+                    "priority": 10
+                  }
+                },
+                "1": {
+                  "villains": {
+                    "forceExclude": [
+                      "Brotherhood"
+                    ],
+                    "priority": 10
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "displayName": "Magneto"
+      },
+      {
+        "name": "Red_Skull",
+        "postRandomization": {
+          "conditionalRules": [
+            {
+              "parameter": "numberOfPlayers",
+              "conditions": {
+                "2-5": {
+                  "villains": {
+                    "forceInclude": [
+                      "HYDRA"
+                    ],
+                    "priority": 10
+                  }
+                },
+                "1": {
+                  "villains": {
+                    "forceExclude": [
+                      "HYDRA"
+                    ],
+                    "priority": 10
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "displayName": "Red Skull"
+      }
+    ],
+    "villains": [
+      {
+        "name": "Brotherhood",
+        "displayName": "Brotherhood"
+      },
+      {
+        "name": "Enemies_Of_Asgard",
+        "displayName": "Enemies Of Asgard"
+      },
+      {
+        "name": "HYDRA",
+        "displayName": "HYDRA"
+      },
+      {
+        "name": "Masters_Of_Evil",
+        "displayName": "Masters Of Evil"
+      },
+      {
+        "name": "Radiation",
+        "displayName": "Radiation"
+      },
+      {
+        "name": "Skrulls",
+        "displayName": "Skrulls"
+      },
+      {
+        "name": "Spider_Foes",
+        "displayName": "Spider Foes"
+      }
+    ],
+    "henchmen": [
+      {
+        "name": "Doombot_Legion",
+        "displayName": "Doombot Legion"
+      },
+      {
+        "name": "Hand_Ninjas",
+        "displayName": "Hand Ninjas"
+      },
+      {
+        "name": "Savage_Land_Mutates",
+        "displayName": "Savage Land Mutates"
+      },
+      {
+        "name": "Sentinel",
+        "displayName": "Sentinel"
+      }
+    ],
+    "boards": [
+      {
+        "name": "Hero",
+        "displayName": "Hero"
+      }
+    ],
+    "schemes": [
+      {
+        "name": "The_Legacy_Virus",
+        "postRandomization": {
+          "schemeTwists": 8,
+          "notes": [
+            "Wound stack holds 6 Wounds per player."
+          ]
+        },
+        "displayName": "The Legacy Virus"
+      },
+      {
+        "name": "Midtown_Bank_Robbery",
+        "postRandomization": {
+          "schemeTwists": 8,
+          "bystanders": 12
+        },
+        "displayName": "Midtown Bank Robbery"
+      },
+      {
+        "name": "Negative_Zone_Prison_Breakout",
+        "postRandomization": {
+          "schemeTwists": 8,
+          "henchmen": {
+            "addExtra": 1
+          },
+          "conditionalRules": [
+            {
+              "parameter": "numberOfPlayers",
+              "conditions": {
+                "1": {
+                  "notes": [
+                    "Not recommended for solo play."
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "displayName": "Negative Zone Prison Breakout"
+      },
+      {
+        "name": "Portals_To_The_Dark_Dimension",
+        "postRandomization": {
+          "schemeTwists": 7
+        },
+        "displayName": "Portals To The Dark Dimension"
+      },
+      {
+        "name": "Replace_Earths_Leaders_With_Killbots",
+        "postRandomization": {
+          "schemeTwists": 5,
+          "extraTwistsNextToScheme": 3,
+          "bystanders": 18,
+          "notes": [
+            "3 additional Twists next to this Scheme."
+          ]
+        },
+        "displayName": "Replace Earth's Leaders With Killbots"
+      },
+      {
+        "name": "Secret_Invasion_Of_The_Skrull_Shapeshifters",
+        "postRandomization": {
+          "schemeTwists": 8,
+          "villainDeck": {},
+          "board": {
+            "forceType": "Hero"
+          },
+          "notes": [
+            "Shuffle 12 random Heroes from the Hero Deck into the Villain Deck."
+          ],
+          "conditionalRules": [
+            {
+              "parameter": "numberOfPlayers",
+              "conditions": {
+                "1": {
+                  "heroes": {
+                    "addExtra": 3
+                  },
+                  "villains": {
+                    "forceInclude": [
+                      "Skrulls"
+                    ],
+                    "priority": 15
+                  },
+                  "boards": {
+                    "forceInclude": [
+                      "Hero"
+                    ],
+                    "priority": 10
+                  }
+                },
+                "2-4": {
+                  "heroes": {
+                    "addExtra": 1
+                  },
+                  "villains": {
+                    "forceInclude": [
+                      "Skrulls"
+                    ],
+                    "priority": 15
+                  },
+                  "boards": {
+                    "forceInclude": [
+                      "Hero"
+                    ],
+                    "priority": 10
+                  }
+                },
+                "5": {
+                  "villains": {
+                    "forceInclude": [
+                      "Skrulls"
+                    ],
+                    "priority": 15
+                  },
+                  "boards": {
+                    "forceInclude": [
+                      "Hero"
+                    ],
+                    "priority": 10
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "displayName": "Secret Invasion Of The Skrull Shapeshifters"
+      },
+      {
+        "name": "Super_Hero_Civil_War",
+        "postRandomization": {
+          "schemeTwists": 8,
+          "conditionalRules": [
+            {
+              "parameter": "numberOfPlayers",
+              "conditions": {
+                "1-3": {
+                  "schemeTwists": 8
+                },
+                "4-5": {
+                  "schemeTwists": 5
+                }
+              }
+            },
+            {
+              "parameter": "numberOfPlayers",
+              "conditions": {
+                "1": {
+                  "heroes": {
+                    "set": {
+                      "count": 3
+                    }
+                  },
+                  "notes": [
+                    "Not recommended for solo play."
+                  ]
+                },
+                "2": {
+                  "heroes": {
+                    "set": {
+                      "count": 4
+                    }
+                  }
+                },
+                "3-4": {
+                  "heroes": {
+                    "set": {
+                      "count": 5
+                    }
+                  }
+                },
+                "5": {
+                  "heroes": {
+                    "set": {
+                      "count": 6
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "displayName": "Super Hero Civil War"
+      },
+      {
+        "name": "Unleash_The_Power_Of_The_Cosmic_Cube",
+        "postRandomization": {
+          "schemeTwists": 8
+        },
+        "displayName": "Unleash The Power Of The Cosmic Cube"
+      }
+    ]
+  }
+}
